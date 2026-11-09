@@ -1,0 +1,4 @@
+import { BarChart3, Compass, MessageCircle, Radar } from 'lucide-react'
+
+const items = [[Radar, 'Smarter attendance', 'See who is in, out, and on track at a glance.'], [BarChart3, 'Clear work progress', 'Turn daily updates into momentum your team can see.'], [MessageCircle, 'Better collaboration', 'Keep every conversation close to the work.'], [Compass, 'Actionable insights', 'Make confident decisions with a pulse on your people.']]
+export function TrustSection() { return <section className="trust section"><div className="section-heading"><p className="eyebrow">One clear view</p><h2>Everything your team needs<br /><em>to stay organized.</em></h2></div><div className="trust-grid">{items.map(([Icon, title, desc]) => <article className="trust-item" key={title as string}><span className="feature-icon"><Icon size={19} /></span><h3>{title as string}</h3><p>{desc as string}</p></article>)}</div></section> }
